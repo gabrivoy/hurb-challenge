@@ -2,9 +2,9 @@
 
 Desenvolvido por Gabriel Ribeiro Gomes, GitHub: [@gabrivoy](https://github.com/gabrivoy). *ribeiroggabriel@gmail.com* | *ribeirogabriel@poli.ufrj.br*.
 
----
+
 ## Introdução
----
+
 
 Este repositório tem como objetivo apresentar a resolução do desafio para a posição de Cientista de Dados/Engenheiro de Dados da Hurb, que consiste na montagem de um pipeline de dados usando Apache Beam. Caso você não esteja familiarizado com o desafio, pode vê-lo aqui: [Desafio Data Engineer Hurb](https://github.com/gabrivoy/hurb-challenge/blob/main/Desafio%20Apache%20Beam%20-%20Data%20Engineer.pdf) .
 
@@ -15,7 +15,7 @@ As tecnologias e conhecimentos aplicados na resolução desse desafio foram:
 * VirtualEnvironments
 
 ## Instalação
----
+
 O desafio requer [**Python**](https://www.python.org/) **v3.5+** e o **pip** para ser executado. Após a instalação, o usuário pode ir até sua pasta de preferência e realizar o git clone.
 
 ```
@@ -40,10 +40,9 @@ Após a instalação, executar o arquivo **pipeline.py** irá rodar a aplicaçã
 ```
 $ python3 pipeline.py
 ```
----
 
 ## Funcionamento
----
+
 
 A aplicação funciona através da leitura de dois arquivos CSV da pasta ./data, os arquivos:
 
@@ -58,12 +57,12 @@ A figura abaixo mostra uma pequena diagramação do funcionamento do sistema, di
 
 No primeiro *pipe*, temos a leitura dos arquivos pelo Apache Beam, e a formatação deles em seis arquivos intermediários de tuplas, usando o código de referência de cada UF como chave primária. Esses arquivos então são alocados dentro de uma pasta chamada ./processing. O segundo *pipe* acessa esses arquivos e faz a união deles em um só, seguindo o formato:
 
-´´´
+```
 arquivo = (id,{dicionario})
-´´´
+```
 
 Onde:
-´´´
+```
 dicionario = {
     '1': número de casos
     '2': número de obitos
@@ -72,10 +71,10 @@ dicionario = {
     '5': nome dos governadores
     '6': sigla dos ufs
     }
-´´´
+```
 
 Por fim, esses arquivos são alocados formatados já como texto separado por vírgulas dentro do arquivo 'casoseobitos.csv', que também fica na pasta ./processing.
 
 A etapa final da aplicação utiliza as bibliotecas pandas e json para transformar o CSV em uma variável do tipo pandas.DataFrame, e dessa variável utilizar as funções 'to_csv()' e 'json.dump()' para gerar os arquivos finais: 'output.csv' e 'outputjson.json.'
 
----
+
