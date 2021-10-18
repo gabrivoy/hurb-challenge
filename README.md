@@ -76,3 +76,5 @@ dicionario = {
 Por fim, esses arquivos são alocados formatados já como texto separado por vírgulas dentro do arquivo 'casoseobitos.csv', que também fica na pasta ./processing.
 
 A etapa final da aplicação utiliza as bibliotecas pandas e json para transformar o CSV em uma variável do tipo pandas.DataFrame, e dessa variável utilizar as funções 'to_csv()' e 'json.dump()' para gerar os arquivos finais: 'output.csv' e 'outputjson.json.'.
+
+Os dados dispostos de maneira formatada podem ser encontrados [aqui](https://github.com/gabrivoy/hurb-challenge/blob/main/output.csv).
