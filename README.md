@@ -53,6 +53,7 @@ Foi feita uma análise exploratória inicial para entender melhor o conteúdo de
 A figura abaixo mostra uma pequena diagramação do funcionamento do sistema, dividido em 2 *pipelines*, onde cada *pipeline* executa pelo menos 3 etapas em cada arquivo.
 
 ![image](https://drive.google.com/uc?export=view&id=1aAL2EQaywNHdm-q2NIzt9J_7JANjpqkF)
+(É possível clicar na imagem para uma melhor visualização)
 
 No primeiro *pipe*, temos a leitura dos arquivos pelo Apache Beam, e a formatação deles em seis arquivos intermediários de tuplas, usando o código de referência de cada UF como chave primária. Esses arquivos então são alocados dentro de uma pasta chamada ./processing. O segundo *pipe* acessa esses arquivos e faz a união deles em um só, seguindo o formato:
 
