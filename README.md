@@ -2,15 +2,15 @@
 
 Desenvolvido por Gabriel Ribeiro Gomes, GitHub: [@gabrivoy](https://github.com/gabrivoy). *ribeiroggabriel@gmail.com* | *ribeirogabriel@poli.ufrj.br*.
 
-
 ## Introdução
 
-
-Este repositório tem como objetivo apresentar a resolução do desafio para a posição de Cientista de Dados/Engenheiro de Dados da Hurb, que consiste na montagem de um pipeline de dados usando Apache Beam. Caso você não esteja familiarizado com o desafio, pode vê-lo aqui: [Desafio Data Engineer Hurb](https://github.com/gabrivoy/hurb-challenge/blob/main/Desafio%20Apache%20Beam%20-%20Data%20Engineer.pdf) .
+Este repositório tem como objetivo apresentar a resolução do desafio para a posição de Cientista de Dados/Engenheiro de Dados da Hurb, que consiste na montagem de um pipeline de dados usando Apache Beam. Caso você não esteja familiarizado com o desafio, pode vê-lo aqui: [Desafio Data Engineer Hurb](https://github.com/gabrivoy/hurb-challenge/blob/main/Desafio%20Apache%20Beam%20-%20Data%20Engineer.pdf).
 
 As tecnologias e conhecimentos aplicados na resolução desse desafio foram:
 * Python
 * Framework Apache Beam 
+* Pandas
+* Json
 * Git
 * VirtualEnvironments
 
@@ -43,7 +43,6 @@ $ python3 pipeline.py
 
 ## Funcionamento
 
-
 A aplicação funciona através da leitura de dois arquivos CSV da pasta ./data, os arquivos:
 
 * EstadosIBGE.csv
@@ -75,6 +74,4 @@ dicionario = {
 
 Por fim, esses arquivos são alocados formatados já como texto separado por vírgulas dentro do arquivo 'casoseobitos.csv', que também fica na pasta ./processing.
 
-A etapa final da aplicação utiliza as bibliotecas pandas e json para transformar o CSV em uma variável do tipo pandas.DataFrame, e dessa variável utilizar as funções 'to_csv()' e 'json.dump()' para gerar os arquivos finais: 'output.csv' e 'outputjson.json.'
-
-
+A etapa final da aplicação utiliza as bibliotecas pandas e json para transformar o CSV em uma variável do tipo pandas.DataFrame, e dessa variável utilizar as funções 'to_csv()' e 'json.dump()' para gerar os arquivos finais: 'output.csv' e 'outputjson.json.'.
